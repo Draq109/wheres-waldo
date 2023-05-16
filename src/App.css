@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: 'alarm-clock';
+    src: url('./fonts/alarm-clock.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: 'PlayMeGames';
+    src: url('./fonts/PlayMeGames.otf');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button,
+input[type="submit"],
+input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar {
+    background-color: black;
+    width: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(53, 53, 53);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(50, 50, 50);
+    border-radius: 1px;
+}
+
+.background-overlay {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 99vw;
+    height: 2998px;
+    background-color: transparent;
+}
+
+.selection-box {
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    top: 17%;
+    left: 50%;
+    width: 35rem;
+    height: 35rem;
+    margin-top: -17.5rem;
+    margin-left: -17.5rem;
+    color: white;
+    background-color: rgba(22, 22, 22, 0.911);
+    border-radius: 1rem;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.app-active {
+    /* Blur and de-color */
+    -webkit-filter: blur(2px) grayscale(65%);
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.marvel-image {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+
+.app-header {
+    background-color: black;
+    color: white;
+    position: sticky;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 40rem;
+}
+
+.title {
+    font-family: 'PlayMeGames', Arial, Helvetica;
+    font-size: 1.5rem;
+
+
+}
+
+.timer {
+    font-family: 'alarm-clock', Arial, Helvetica;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.dropdown {
+    max-width: 94px;
+    width: 94px;
+}
+
+.dropdown-btn {
+    color: white;
+    background-color: transparent;
+    font-size: 3.75rem;
+    letter-spacing: -.2rem;
+    text-align: center;
+    margin-bottom: 50%;
+    padding-top: 0;
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(32, 32, 32, 0.962);
+    min-width: 10rem;
+    margin-right: 3rem;
+}
+
+.dropdown-btn-active {
+    color: white;
+    background-color: transparent;
+    font-size: 3.75rem;
+    letter-spacing: -.2rem;
+    text-align: center;
+    margin-bottom: 0;
+    padding-top: 1rem;
+}
+
+.dropdown-content-active {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(32, 32, 32, 0.962);
+    min-width: 10rem;
+    margin-right: 3rem;
 }

@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import marvelPic from './marvel.webp';
+import Stopwatch from './components/Stopwatch';
+import DropdownMenu from './components/DropdownMenu';
+import SelectionBox from './components/SelectionBox';
 
 function App() {
+  const [pause, setPause] = useState(false);
+  const [reset, setReset] = useState(false);
+  const [active, setActive] = useState(true);
+  const html = document.getElementsByTagName('html');
+
+  function pauseTime() {
+    pause === true ? setPause(false) : setPause(true);
+  }
+  function toggleActive() {
+    active === true ? setActive(false) : setActive(true);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SelectionBox toggleActive={toggleActive}></SelectionBox>
+      <div className={active ? "app-active" : "app"}>
+        <header className="app-header">
+          <span className='title' onClick={pauseTime}>Find it</span>
+          <Stopwatch pause={pause} setPause={setPause} reset={reset} setReset={setReset}></Stopwatch>
+          <DropdownMenu></DropdownMenu>
+        </header>
+        <img src={marvelPic} className='marvel-image'></img>
+      </div>
+    </>
   );
 }
 
