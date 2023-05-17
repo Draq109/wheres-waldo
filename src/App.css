@@ -1,3 +1,4 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.min.css");
 @font-face {
     font-family: 'alarm-clock';
     src: url('./fonts/alarm-clock.ttf');
@@ -88,11 +89,12 @@ input[type="reset"] {
     border-radius: 1rem;
 }
 
-.marvel-pic-box {
-    max-width: 525px;
-    height: 100% ;
-    transform: scale(5);
-    transform-origin: 95% 70%;
+.background-overlay-active{
+    display: none;
+}
+
+.selection-box-active{
+    display: none;
 }
 
 .selection-box-flex {
@@ -103,13 +105,21 @@ input[type="reset"] {
     overflow: hidden;
 }
 
+.marvel-pic-box {
+    max-width: 525px;
+    height: 100%;
+    transform: scale(5);
+    transform-origin: 95% 70%;
+}
+
+
 .characters-box {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    padding-top: 2rem;
+    align-items: center;
+    padding-top: 1.5rem;
     padding-left: 5rem;
-    gap: 4rem;
+    gap: 2rem;
 }
 
 .antman-box,
@@ -123,6 +133,14 @@ input[type="reset"] {
     padding-bottom: .75rem;
     padding-left: .75rem;
     border-radius: 2rem;
+    transition-property: transform;
+    transition-duration: .5s;
+}
+
+.antman-box:hover,
+.deadpool-box:hover,
+.gwen-box:hover {
+    transform: scale(1.1);
 }
 
 
@@ -178,46 +196,38 @@ input[type="reset"] {
     color: gray;
 }
 
-
 .antman-box .dif-level {
-
     color: red;
 }
 
 .deadpool-box .dif-level {
-
     color: orange;
 }
 
 .gwen-box .dif-level {
-
     color: green;
 }
 
-
+.start-btn {
+    width: 6rem;
+}
 
 .app {
     display: flex;
     flex-direction: column;
     width: auto;
+    transition: all .6s ease-in-out;
 }
 
 .app-active {
     /* Blur and de-color */
-    -webkit-filter: blur(4px) grayscale(80%);
+    -webkit-filter: blur(2.2px) grayscale(65%) brightness(45%);
     display: flex;
     flex-direction: column;
     width: auto;
+    transition: all .3s ease-in-out;
 }
 
-.marvel-image {
-    min-height: 100%;
-    min-width: 1024px;
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-}
 
 .app-header {
     background-color: black;
@@ -286,4 +296,13 @@ input[type="reset"] {
     background-color: rgba(32, 32, 32, 0.962);
     min-width: 10rem;
     margin-right: 3rem;
+}
+
+.marvel-image {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
 }

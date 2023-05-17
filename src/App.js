@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import marvelPic from './images/marvel.webp';
 import Stopwatch from './components/Stopwatch';
@@ -6,7 +6,7 @@ import DropdownMenu from './components/DropdownMenu';
 import SelectionBox from './components/SelectionBox';
 
 function App() {
-  const [pause, setPause] = useState(false);
+  const [pause, setPause] = useState(true);
   const [reset, setReset] = useState(false);
   const [active, setActive] = useState(true);
   const html = document.getElementsByTagName('html');
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <SelectionBox toggleActive={toggleActive}></SelectionBox>
+      <SelectionBox toggleActive={toggleActive} pauseTime={pauseTime} active={active}></SelectionBox>
       <div className={active ? "app-active" : "app"}>
         <header className="app-header">
           <span className='title' onClick={pauseTime}>Find it</span>
