@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import marvelPic from './marvel.webp';
+import marvelPic from './images/marvel.webp';
 import Stopwatch from './components/Stopwatch';
 import DropdownMenu from './components/DropdownMenu';
 import SelectionBox from './components/SelectionBox';
