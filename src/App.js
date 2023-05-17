@@ -9,7 +9,6 @@ function App() {
   const [pause, setPause] = useState(true);
   const [reset, setReset] = useState(false);
   const [active, setActive] = useState(true);
-  const html = document.getElementsByTagName('html');
 
   function pauseTime() {
     pause === true ? setPause(false) : setPause(true);
@@ -23,7 +22,7 @@ function App() {
       <SelectionBox toggleActive={toggleActive} pauseTime={pauseTime} active={active}></SelectionBox>
       <div className={active ? "app-active" : "app"}>
         <header className="app-header">
-          <span className='title' onClick={pauseTime}>Find it</span>
+          <span className='title'>Find them</span>
           <Stopwatch pause={pause} setPause={setPause} reset={reset} setReset={setReset}></Stopwatch>
           <DropdownMenu></DropdownMenu>
         </header>

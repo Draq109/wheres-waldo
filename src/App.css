@@ -1,4 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.min.css");
+
 @font-face {
     font-family: 'alarm-clock';
     src: url('./fonts/alarm-clock.ttf');
@@ -27,6 +28,11 @@
 @font-face {
     font-family: 'MaldiniNormal';
     src: url('./fonts/MaldiniNormal.ttf');
+}
+
+@font-face {
+    font-family: 'Quicksandbook';
+    src: url('./fonts/QuicksandbookRegular.otf');
 }
 
 * {
@@ -74,6 +80,29 @@ input[type="reset"] {
     background-color: transparent;
 }
 
+.selection-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 12rem;
+    color: white;
+    z-index: 2;
+    top: 4%;
+    left: 45.5%;
+}
+.selection-title .title {
+    font-size: 2rem;
+    font-family: 'PlayMeGames', Arial, Helvetica;
+}
+.selection-title .author {
+    font-size: 1rem;
+    font-family: 'Quicksandbook', Arial, Helvetica;
+    letter-spacing: -.04rem;
+}
+
 .selection-box {
     display: inline-block;
     position: absolute;
@@ -89,11 +118,11 @@ input[type="reset"] {
     border-radius: 1rem;
 }
 
-.background-overlay-active{
+.background-overlay-active {
     display: none;
 }
 
-.selection-box-active{
+.selection-box-active {
     display: none;
 }
 
@@ -146,17 +175,20 @@ input[type="reset"] {
 
 .antman-box {
     font-family: 'Insideman', Arial, Helvetica;
+    font-size: 1.75rem;
     letter-spacing: -.1rem;
     color: red;
 }
 
 .gwen-box {
     font-family: 'SpiderManRegular', Arial, Helvetica;
+    font-size: 1.75rem;
     letter-spacing: .1rem;
 }
 
 .deadpool-box {
     font-family: 'RogueHeroLaser', Arial, Helvetica;
+    font-size: 1.7rem;
     letter-spacing: .05rem;
     color: red
 }
@@ -181,17 +213,15 @@ input[type="reset"] {
     padding-top: 1rem;
     width: 100%;
 }
-
-.description .difficulty {
-    font-family: 'MaldiniNormal', Arial, Helvetica;
-    font-size: 1.5rem;
-    letter-spacing: normal;
-    color: darkgray;
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .description .dif-level {
-    font-family: 'MaldiniNormal', Arial, Helvetica;
-    font-size: 1.5rem;
+    font-family: 'Quicksandbook', Arial, Helvetica;
+    font-size: 1rem;
     letter-spacing: .10rem;
     color: gray;
 }
@@ -245,14 +275,12 @@ input[type="reset"] {
 .title {
     font-family: 'PlayMeGames', Arial, Helvetica;
     font-size: 1.5rem;
-
-
 }
 
 .timer {
     font-family: 'alarm-clock', Arial, Helvetica;
     font-size: 2rem;
-    margin-left: 1rem;
+    margin-right: 2.5rem;
 }
 
 .dropdown {
