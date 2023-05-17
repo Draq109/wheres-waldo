@@ -8,6 +8,26 @@
     src: url('./fonts/PlayMeGames.otf');
 }
 
+@font-face {
+    font-family: 'Insideman';
+    src: url('./fonts/Insideman.otf');
+}
+
+@font-face {
+    font-family: 'RogueHeroLaser';
+    src: url('./fonts/RogueHeroLaser.otf');
+}
+
+@font-face {
+    font-family: 'SpiderManRegular';
+    src: url('./fonts/SpiderManRegular.ttf');
+}
+
+@font-face {
+    font-family: 'MaldiniNormal';
+    src: url('./fonts/MaldiniNormal.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -64,9 +84,100 @@ input[type="reset"] {
     margin-top: -17.5rem;
     margin-left: -17.5rem;
     color: white;
-    background-color: rgba(22, 22, 22, 0.911);
+    background-color: rgba(24, 26, 27, 0.971);
     border-radius: 1rem;
 }
+
+.characters-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4rem;
+}
+
+.antman-box,
+.gwen-box,
+.deadpool-box {
+    text-align: center;
+    display: flex;
+    width: 21rem;
+    height: 6rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    padding-left: .75rem;
+    border-radius: 2rem;
+}
+
+
+.antman-box {
+    font-family: 'Insideman', Arial, Helvetica;
+    letter-spacing: -.1rem;
+    color: red;
+}
+
+.gwen-box {
+    font-family: 'SpiderManRegular', Arial, Helvetica;
+    letter-spacing: .1rem;
+}
+
+.deadpool-box {
+    font-family: 'RogueHeroLaser', Arial, Helvetica;
+    letter-spacing: .05rem;
+    color: red
+}
+
+.antman-icon {
+    width: 7rem;
+    height: 7rem;
+}
+
+.gwen-icon {
+    padding-left: .8rem;
+    width: 5.5rem;
+    height: 5.5rem;
+}
+
+.deadpool-icon {
+    height: 6rem;
+    width: 7rem;
+}
+
+.characters-box .description {
+    padding-top: 1rem;
+    width: 100%;
+}
+
+.description .difficulty {
+    font-family: 'MaldiniNormal', Arial, Helvetica;
+    font-size: 1.5rem;
+    letter-spacing: normal;
+    color: darkgray;
+}
+
+.description .dif-level {
+    font-family: 'MaldiniNormal', Arial, Helvetica;
+    font-size: 1.5rem;
+    letter-spacing: .10rem;
+    color: gray;
+}
+
+
+.antman-box .dif-level {
+
+    color: red;
+}
+
+.deadpool-box .dif-level {
+
+    color: orange;
+}
+
+.gwen-box .dif-level {
+
+    color: green;
+}
+
+
 
 .app {
     display: flex;
@@ -76,7 +187,7 @@ input[type="reset"] {
 
 .app-active {
     /* Blur and de-color */
-    -webkit-filter: blur(2px) grayscale(65%);
+    -webkit-filter: blur(4px) grayscale(80%);
     display: flex;
     flex-direction: column;
     width: auto;
