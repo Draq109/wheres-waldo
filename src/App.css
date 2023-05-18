@@ -35,7 +35,10 @@
     src: url('./fonts/QuicksandbookRegular.otf');
 }
 
+
+
 * {
+    --cursor-color: #000000;
     margin: 0;
     padding: 0;
     border: 0;
@@ -273,7 +276,7 @@ input[type="reset"] {
     align-content: center;
     justify-content: center;
     justify-items: center;
-    gap: 40rem;
+    gap: 30vw;
 }
 
 .title {
@@ -364,12 +367,15 @@ input[type="reset"] {
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    margin-top: 1.75rem;
+    margin-left: 1.5rem;
     width: 9.5rem;
     height: 8rem;
     position: absolute;
     border-radius: .5rem;
     background-color: rgba(29, 27, 27, 0.874);
     color: white;
+    z-index: 2;
 }
 
 .context-menu li {
@@ -382,6 +388,7 @@ input[type="reset"] {
     font-family: "Quicksandbook", Arial, Helvetica;
     font-size: 1rem;
     cursor: pointer;
+    user-select: none;
 }
 
 .context-menu li:hover {
@@ -399,4 +406,37 @@ input[type="reset"] {
     height: auto;
     top: 0;
     left: 0;
+    cursor: none;
+}
+
+.rounded-cursor {
+    display: inline-block;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 5rem;
+    margin-right: 5rem;
+    border: 2px solid #fff;
+    outline: .1rem solid black;
+    border-radius: 50%;
+
+}
+
+.point-cursor {
+    display: inline-block;
+    position: absolute;
+    margin-top: 1.4rem;
+    margin-left: 1.4rem;
+    width: .5rem;
+    height: .5rem;
+    background-color: white;
+    outline: .1rem solid black;
+    border-radius: 50%;
+    cursor: none;
+    
+}
+.cursor {
+    display: flex;
+    position: absolute;
+    margin-bottom: 5rem;
 }
