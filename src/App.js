@@ -4,6 +4,7 @@ import marvelPic from './images/marvel.webp';
 import Stopwatch from './components/Stopwatch';
 import DropdownMenu from './components/DropdownMenu';
 import SelectionBox from './components/SelectionBox';
+import ContextMenu from './components/ContextMenu';
 
 function App() {
   const [pause, setPause] = useState(true);
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
       <SelectionBox toggleActive={toggleActive} pauseTime={pauseTime} active={active}></SelectionBox>
+        <ContextMenu></ContextMenu>
       <div className={active ? "app-active" : "app"}>
         <header className="app-header">
           <span className='title'>Find them</span>

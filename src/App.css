@@ -42,6 +42,7 @@
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    list-style: none;
 }
 
 button,
@@ -93,10 +94,12 @@ input[type="reset"] {
     top: 4%;
     left: 45.5%;
 }
+
 .selection-title .title {
     font-size: 2rem;
     font-family: 'PlayMeGames', Arial, Helvetica;
 }
+
 .selection-title .author {
     font-size: 1rem;
     font-family: 'Quicksandbook', Arial, Helvetica;
@@ -213,6 +216,7 @@ input[type="reset"] {
     padding-top: 1rem;
     width: 100%;
 }
+
 .description {
     display: flex;
     flex-direction: column;
@@ -275,12 +279,15 @@ input[type="reset"] {
 .title {
     font-family: 'PlayMeGames', Arial, Helvetica;
     font-size: 1.5rem;
+    user-select: none;
 }
 
 .timer {
     font-family: 'alarm-clock', Arial, Helvetica;
     font-size: 2rem;
     margin-left: 4.75rem;
+    cursor: default;
+    user-select: none;
 }
 
 .dropdown {
@@ -291,6 +298,7 @@ input[type="reset"] {
     width: 13rem;
     padding-top: 3.5rem;
     gap: 1.5rem;
+    user-select: none;
 }
 
 .dropdown-btn {
@@ -302,7 +310,9 @@ input[type="reset"] {
     letter-spacing: -.2rem;
     text-align: center;
     margin-bottom: 6.5rem;
+    user-select: none;
 }
+
 .dropdown-btn-active {
     color: white;
     background-color: transparent;
@@ -339,14 +349,47 @@ input[type="reset"] {
 .dropdown-gwen-icon {
     height: 3.4rem;
 }
+
 .dropdown-deadpool-icon {
     margin-left: .55rem;
     height: 3.5rem;
 }
+
 .dropdown-antman-icon {
     height: 4rem;
 }
 
+.context-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 9.5rem;
+    height: 8rem;
+    position: absolute;
+    border-radius: .5rem;
+    background-color: rgba(29, 27, 27, 0.874);
+    color: white;
+}
+
+.context-menu li {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    border-radius: .5rem;
+    padding-left: 5%;
+    font-family: "Quicksandbook", Arial, Helvetica;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.context-menu li:hover {
+    transition: all .2s;
+    border-width: .1rem;
+    transform: translateY(-1px);
+    background-color: rgba(14, 12, 12, 0.973);
+}
 
 
 .marvel-image {
